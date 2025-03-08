@@ -52,7 +52,7 @@ export const connect = async (): Promise<typeof mongoose> => {
         mongoose.set("strictQuery", true); // Enable strict query mode
         cached.promise = mongoose
             .connect(
-                `mongodb+srv://mazenafifi1999:mazenafifi1999@nawy-shares.olo4p.mongodb.net/?retryWrites=true&w=majority&appName=nawy-shares`
+                process.env.MONGO_URL as string
             )
             .then(() => {
                 console.log("Database initialized successfully");
