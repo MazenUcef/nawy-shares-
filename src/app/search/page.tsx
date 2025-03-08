@@ -12,7 +12,7 @@
  */
 
 "use client";
-import { useEffect, useState, useCallback, ChangeEvent, FormEvent } from "react";
+import { useEffect, useState, useCallback, ChangeEvent, FormEvent, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { FaBed, FaBath } from "react-icons/fa";
@@ -51,7 +51,18 @@ interface SidebarData {
  * 
  * @returns {JSX.Element} The rendered SearchPage component.
  */
+
+
+
+
 export default function SearchPage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <SearchPageContent />
+        </Suspense>
+    );
+}
+function SearchPageContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
 

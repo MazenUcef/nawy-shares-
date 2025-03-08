@@ -16,7 +16,7 @@
 import Logo from '@/assets/icons/Logo';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 /**
@@ -26,7 +26,16 @@ import { FaSearch } from 'react-icons/fa';
  * 
  * @returns {JSX.Element} The rendered Header component.
  */
-const Header = () => {
+
+
+function Header() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <HeaderContent />
+        </Suspense>
+    );
+}
+const HeaderContent = () => {
     const searchParams = useSearchParams(); // Access URL search parameters
     const router = useRouter(); // Next.js router for navigation
     const [searchTerm, setSearchTerm] = useState<string>(''); // State for the search term

@@ -22,6 +22,9 @@ import img5 from "@/assets/images/Modern Living Room Penthouse minimalist Apartm
 import DeleteButton from "@/components/DeleteButton";
 import Image from "next/image";
 import Link from "next/link";
+import { unstable_noStore as noStore } from 'next/cache';
+
+export const dynamic = 'force-dynamic'; // Force dynamic rendering (SSR)
 
 /**
  * @async
@@ -35,28 +38,28 @@ interface Params {
         id: string;
 }
 
-export default async function Post({ params }: { params: Params }) {
+export default async function Post({ params }: { params: Promise<Params> }) {
+    const resolvedParams = await params; // Await the promise
+    noStore(); // Ensure no caching for dynamic rendering
     let listing = null;
     const images = [img1, img2, img3, img4, img5];
 
     try {
-        // Fetch listing data from the API
         const res = await fetch('http://localhost:3000/api/listing/get', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ listingId: params.id }),
-            cache: 'no-store'
+            body: JSON.stringify({ listingId: resolvedParams.id }),
+            cache: 'no-store', // Ensure no caching
         });
         const data = await res.json();
         listing = data[0];
     } catch (error) {
-        // Handle errors if the listing cannot be fetched
         console.error("Error fetching listing:", error);
-        // Set a default error message for the listing
         listing = { title: "Failed to Load listing" };
     }
+
 
     // Display an error message if the listing cannot be loaded
     if (!listing || listing.name === "Failed to load listing") {

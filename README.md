@@ -38,6 +38,13 @@ Add the following environment variables:
 MONGO_URL="mongodb+srv://mazenafifi1999:mazenafifi1999@nawy-shares.olo4p.mongodb.net/?retryWrites=true&w=majority&appName=nawy-shares"
 ```
 
+## Running the Project by Docker
+
+```bash
+docker compose up --build
+```
+And then, go to localhost:3001
+
 ## Running the Project
 Development Mode
 To run the project in development mode:
