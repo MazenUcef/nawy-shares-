@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Nawy Shares Task
+This project is a Next.js application that allows users to browse, view, and manage property listings. It includes features like fetching listing data, displaying detailed information, and handling errors gracefully.
 
-## Getting Started
+Table of Contents
+Prerequisites
 
-First, run the development server:
+Getting Started
 
-```bash
+Clone the Repository
+
+Install Dependencies
+
+Set Up Environment Variables
+
+Running the Project
+
+Development Mode
+
+Production Build
+
+Project Structure
+
+Technologies Used
+
+Contributing
+
+License
+
+Prerequisites
+Before you begin, ensure you have the following installed:
+
+Node.js (v18 or higher)
+
+npm (v9 or higher) or Yarn (v1 or higher)
+
+MongoDB (for database setup)
+
+Getting Started
+Clone the Repository
+Open your terminal or command prompt.
+
+Run the following command to clone the repository:
+
+bash
+Copy
+git clone https://github.com/your-username/nawy-shares-task.git
+Navigate to the project directory:
+
+bash
+Copy
+cd nawy-shares-task
+Install Dependencies
+Install the required dependencies using npm or Yarn:
+
+bash
+Copy
+npm install
+or
+
+bash
+Copy
+yarn install
+Set Up Environment Variables
+Create a .env.local file in the root directory of the project.
+
+Add the following environment variables:
+
+
+Running the Project
+Development Mode
+To run the project in development mode:
+
+bash
+Copy
 npm run dev
-# or
+or
+
+bash
+Copy
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This will start the development server at http://localhost:3000. Open this URL in your browser to view the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production Build
+To build the project for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+bash
+Copy
+npm run build
+or
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+bash
+Copy
+yarn build
+To start the production server:
 
-## Learn More
+bash
+Copy
+npm run start
+or
 
-To learn more about Next.js, take a look at the following resources:
+bash
+Copy
+yarn start
+Project Structure
+Here’s an overview of the project structure:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy
+nawy-shares-task/
+├── public/               # Static assets (images, icons, etc.)
+├── src/
+│   ├── app/              # Next.js app router pages
+│   ├── components/       # Reusable React components
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and libraries
+│   ├── styles/           # Global styles and Tailwind configuration
+│   └── types/            # TypeScript type definitions
+├── .env.local            # Environment variables
+├── .eslintrc.json        # ESLint configuration
+├── .gitignore            # Files and directories to ignore in Git
+├── next.config.js        # Next.js configuration
+├── package.json          # Project dependencies and scripts
+├── README.md             # Project documentation
+└── tailwind.config.js    # Tailwind CSS configuration
+Technologies Used
+Frontend:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Next.js (React framework)
 
-## Deploy on Vercel
+Tailwind CSS (Styling)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+React Icons (Icon library)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+React Hot Toast (Toast notifications)
+
+Backend:
+
+MongoDB (Database)
+
+Mongoose (MongoDB ODM)
+
+Development Tools:
+
+TypeScript (Static typing)
+
+ESLint (Code linting)
+
+Prettier (Code formatting)
