@@ -1,69 +1,47 @@
-Nawy Shares Task
-A Next.js-based property listing application for browsing, viewing, and managing property listings.
 
-This project is a full-stack web application built with Next.js and MongoDB that allows users to browse property listings, view detailed information about each listing, and manage listings (create, update, delete). It includes features like search functionality, error handling, and responsive design.
+## Installation
 
-Features
-Browse Listings: View a list of available properties with details like price, beds, baths, and more.
+Clone the Repository
+Open your terminal or command prompt.
 
-Search Functionality: Search for properties based on filters like price, location, and amenities.
+Run the following command to clone the repository:
 
-Detailed View: View detailed information about a specific property, including images, description, and features.
-
-Manage Listings: Create, update, and delete property listings (admin functionality).
-
-Error Handling: Graceful error handling for failed API requests or missing data.
-
-Responsive Design: Optimized for desktop, tablet, and mobile devices.
-
-Technologies Used
-Frontend:
-
-Next.js (React framework for server-side rendering and static site generation)
-
-Tailwind CSS (Utility-first CSS framework)
-
-React Icons (Icon library)
-
-React Hot Toast (Toast notifications)
-
-Backend:
-
-MongoDB (NoSQL database)
-
-Mongoose (MongoDB object modeling for Node.js)
-
-Development Tools:
-
-TypeScript (Static typing for JavaScript)
-
-ESLint (Code linting)
-
-Prettier (Code formatting)
-
-Getting Started
-Clone the Repository:
-
-bash
-Copy
+```bash
 git clone https://github.com/MazenUcef/nawy-shares-.git
+```
+
+Navigate to the project directory:
+
+```bash
 cd nawy-shares-task
-Install Dependencies:
+```
 
-bash
-Copy
+## Install Dependencies
+
+Install the required dependencies using npm or Yarn:
+
+```bash
 npm install
-Set Up Environment Variables:
-Create a .env.local file and add your MongoDB connection string:
+```
 
-env
-Copy
-Generly we have to put the database connection in the env file but i did put it hard coded i teh code base to be more easy to you to test
+```bash
+yarn install
+```
 
-Run the Application:
+## Set Up Environment Variables
 
-bash
-Copy
+Create a .env.local file in the root directory of the project.
+
+Add the following environment variables:
+
+```bash
+MONGO_URL="mongodb+srv://mazenafifi1999:mazenafifi1999@nawy-shares.olo4p.mongodb.net/?retryWrites=true&w=majority&appName=nawy-shares"
+```
+
+## Running the Project
+Development Mode
+To run the project in development mode:
+
+```bash
 npm run dev
-Open in Browser:
-Visit http://localhost:3000 to view the application.
+```
