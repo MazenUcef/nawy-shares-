@@ -46,7 +46,7 @@ Clone the Repository:
 
 bash
 Copy
-git clone https://github.com/your-username/nawy-shares-task.git
+git clone https://github.com/MazenUcef/nawy-shares-.git
 cd nawy-shares-task
 Install Dependencies:
 
