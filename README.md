@@ -1,132 +1,27 @@
 Nawy Shares Task
-This project is a Next.js application that allows users to browse, view, and manage property listings. It includes features like fetching listing data, displaying detailed information, and handling errors gracefully.
+A Next.js-based property listing application for browsing, viewing, and managing property listings.
 
-Table of Contents
-Prerequisites
+This project is a full-stack web application built with Next.js and MongoDB that allows users to browse property listings, view detailed information about each listing, and manage listings (create, update, delete). It includes features like search functionality, error handling, and responsive design.
 
-Getting Started
+Features
+Browse Listings: View a list of available properties with details like price, beds, baths, and more.
 
-Clone the Repository
+Search Functionality: Search for properties based on filters like price, location, and amenities.
 
-Install Dependencies
+Detailed View: View detailed information about a specific property, including images, description, and features.
 
-Set Up Environment Variables
+Manage Listings: Create, update, and delete property listings (admin functionality).
 
-Running the Project
+Error Handling: Graceful error handling for failed API requests or missing data.
 
-Development Mode
+Responsive Design: Optimized for desktop, tablet, and mobile devices.
 
-Production Build
-
-Project Structure
-
-Technologies Used
-
-Contributing
-
-License
-
-Prerequisites
-Before you begin, ensure you have the following installed:
-
-Node.js (v18 or higher)
-
-npm (v9 or higher) or Yarn (v1 or higher)
-
-MongoDB (for database setup)
-
-Getting Started
-Clone the Repository
-Open your terminal or command prompt.
-
-Run the following command to clone the repository:
-
-bash
-Copy
-git clone https://github.com/your-username/nawy-shares-task.git
-Navigate to the project directory:
-
-bash
-Copy
-cd nawy-shares-task
-Install Dependencies
-Install the required dependencies using npm or Yarn:
-
-bash
-Copy
-npm install
-or
-
-bash
-Copy
-yarn install
-Set Up Environment Variables
-Create a .env.local file in the root directory of the project.
-
-Add the following environment variables:
-
-
-Running the Project
-Development Mode
-To run the project in development mode:
-
-bash
-Copy
-npm run dev
-or
-
-bash
-Copy
-yarn dev
-This will start the development server at http://localhost:3000. Open this URL in your browser to view the application.
-
-Production Build
-To build the project for production:
-
-bash
-Copy
-npm run build
-or
-
-bash
-Copy
-yarn build
-To start the production server:
-
-bash
-Copy
-npm run start
-or
-
-bash
-Copy
-yarn start
-Project Structure
-Here’s an overview of the project structure:
-
-Copy
-nawy-shares-task/
-├── public/               # Static assets (images, icons, etc.)
-├── src/
-│   ├── app/              # Next.js app router pages
-│   ├── components/       # Reusable React components
-│   ├── hooks/            # Custom React hooks
-│   ├── lib/              # Utility functions and libraries
-│   ├── styles/           # Global styles and Tailwind configuration
-│   └── types/            # TypeScript type definitions
-├── .env.local            # Environment variables
-├── .eslintrc.json        # ESLint configuration
-├── .gitignore            # Files and directories to ignore in Git
-├── next.config.js        # Next.js configuration
-├── package.json          # Project dependencies and scripts
-├── README.md             # Project documentation
-└── tailwind.config.js    # Tailwind CSS configuration
 Technologies Used
 Frontend:
 
-Next.js (React framework)
+Next.js (React framework for server-side rendering and static site generation)
 
-Tailwind CSS (Styling)
+Tailwind CSS (Utility-first CSS framework)
 
 React Icons (Icon library)
 
@@ -134,14 +29,41 @@ React Hot Toast (Toast notifications)
 
 Backend:
 
-MongoDB (Database)
+MongoDB (NoSQL database)
 
-Mongoose (MongoDB ODM)
+Mongoose (MongoDB object modeling for Node.js)
 
 Development Tools:
 
-TypeScript (Static typing)
+TypeScript (Static typing for JavaScript)
 
 ESLint (Code linting)
 
 Prettier (Code formatting)
+
+Getting Started
+Clone the Repository:
+
+bash
+Copy
+git clone https://github.com/your-username/nawy-shares-task.git
+cd nawy-shares-task
+Install Dependencies:
+
+bash
+Copy
+npm install
+Set Up Environment Variables:
+Create a .env.local file and add your MongoDB connection string:
+
+env
+Copy
+Generly we have to put the database connection in the env file but i did put it hard coded i teh code base to be more easy to you to test
+
+Run the Application:
+
+bash
+Copy
+npm run dev
+Open in Browser:
+Visit http://localhost:3000 to view the application.
